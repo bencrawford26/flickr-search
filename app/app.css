@@ -1,25 +1,27 @@
-/* app css stylesheet */
-
-.menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
+form {
+    padding: 10px 30px 20px 25px;
 }
 
-.menu:before {
-  content: "[";
+md-input-container {
+    width: 100%;
+} 
+
+md-card {
+    width: 15%;
+    float: left;
+} 
+
+.fixed {
+    position: fixed;
 }
 
-.menu:after {
-  content: "]";
+.fixed-left {
+    top: 70px;
+    position: fixed;
+    float: left;
 }
 
-.menu > li {
-  display: inline;
-}
-
-.menu > li + li:before {
-  content: "|";
-  padding-right: 0.3em;
+.float-right {
+    top:70px;
+    float: right;
 }

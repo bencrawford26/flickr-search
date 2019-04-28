@@ -1,0 +1,28 @@
+<md-content>
+
+    <div class="container-fluid">
+
+        <div class="row">
+
+            <div class="col-md-2 fixed-left">
+                <form ng-submit="search()">
+                    <div ng-show="!isSearching">
+                        <md-input-container>
+                            <label>Search Photos</label>
+                            <input name="flickrSearch" class="long" ng-model="searchTerm">
+                        </md-input-container>
+                    </div>
+                </form>
+            </div>
+
+            <div class="col-md-10 float-right">
+                <md-card ng-repeat="picture in results.data.photos.photo" ng-click="displayFullScreen(picture)">
+                    <img ng-src="https://farm{{picture.farm}}.staticflickr.com/{{picture.server}}/{{picture.id}}_{{picture.secret}}_b.jpg"
+                        alt="" class="md-card-image">
+                </md-card>
+            </div>
+
+        </div>
+
+    </div>
+</md-content>
